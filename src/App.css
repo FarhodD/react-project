@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  
+
 }
 
 a {
@@ -14,13 +14,6 @@ ul {
   list-style: none;
 }
 
-.nav {
-  margin-top: 50px;
-  margin-left: 40px;
-  display: flex;
-  gap: 0 20px;
-}
-
 .app__wrapper {
   width: 1200px;
   margin: 0 auto;
@@ -30,4 +23,11 @@ ul {
     'm c';
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
+}
+
+.app__content {
+  grid-area: c;
+  background: #d5d14d4f;
+  font-size: 20px;
+  padding: 20px;
 }
