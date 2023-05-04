@@ -1,0 +1,32 @@
+.dialogs {
+  display: grid;
+  grid-template-columns: 3fr 10fr;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+  /* margin-right: 30px; */
+  background: #333;
+  padding: 10px;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
+  background: #646262;
+  padding: 20px;
+  color: #fff;
+}
+
+.user {
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+  color: #e6e6e6;
+}
+
+.active {
+  border-bottom: 1px solid #fff;
+}
