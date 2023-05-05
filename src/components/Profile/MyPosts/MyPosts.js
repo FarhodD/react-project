@@ -9,12 +9,13 @@ const MyPosts = () => {
     {id: 2, message: 'Hi, it is my first project in React!', likes: 30}
   ]
 
+  let postsData = postData.map(p => <Post message={p.message} count={p.likes}/>)
+
   return (
     <div className={p.posts}>
       <h2 className={p.title__post}>Posts</h2>
       <div className={p.post__content}>
-        <Post message={postData[0].message} count={postData[0].likes}/>
-        <Post message={postData[1].message} count={postData[1].likes}/>
+        {postsData}
       </div>
     </div>
   )
