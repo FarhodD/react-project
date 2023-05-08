@@ -30,3 +30,29 @@
 .active {
   border-bottom: 1px solid #fff;
 }
+
+.writeMessage {
+  display: grid;
+  grid-template-columns: 9fr 2fr;
+  gap: 30px;
+}
+
+.write {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.write:focus {
+  box-shadow: none;
+  border-color: black;
+}
+
+.send {
+  align-self: last baseline;
+  color: white;
+  border-color: white;
+}
+
+.send:hover {
+  border-color: #333;
+}
