@@ -24,7 +24,7 @@ const Dialogs = (props) => {
       <div className={d.messages}>
         {messagesElements}
         <div className={d.writeMessage}>
-          <textarea ref={writeMessageEl} className={d.write}></textarea>
+          <textarea placeholder='Введите сообщение' ref={writeMessageEl} className={d.write}></textarea>
           <button onClick={showMessage} className={d.send}>Send</button>
         </div>
       </div>
