@@ -1,4 +1,5 @@
 import React from 'react';
+import { sendMessageCreator, updateNewMessageBodyCreator } from '../../redux/state';
 import d from './Dialogs.module.css';
 import Message from './Message/Message';
 import Users from './Users/Users';
@@ -6,14 +7,18 @@ import Users from './Users/Users';
 
 
 const Dialogs = (props) => {
-  let dialogsElements = props.state.dialogsData.map(d => <Users name={d.name} id={d.id} />)
-  let messagesElements = props.state.messages.map(m => <Message message={m.message} />)
-  
-  let writeMessageEl = React.createRef();
+  let state = props.store.getState().dialogsPage;
 
-  let showMessage = () => {
-    let text = writeMessageEl.current.value;
-    alert(text);
+  let dialogsElements = state.dialogsData.map(d => <Users name={d.name} id={d.id} />)
+  let messagesElements = state.messages.map(m => <Message message={m.message} />)
+  let newMessageBody = state.newMessageBody;
+
+  let onSendMessageClick = () => {
+    props.store.dispatch(sendMessageCreator()) 
+  }
+  let onNewMessageChange = (e) => {
+    let body = e.target.value;
+    props.store.dispatch(updateNewMessageBodyCreator(body))
   }
 
   return (
@@ -24,8 +29,12 @@ const Dialogs = (props) => {
       <div className={d.messages}>
         {messagesElements}
         <div className={d.writeMessage}>
-          <textarea placeholder='Введите сообщение' ref={writeMessageEl} className={d.write}></textarea>
-          <button onClick={showMessage} className={d.send}>Send</button>
+          <textarea
+            placeholder='Enter your message'
+            value={newMessageBody}
+            onChange={onNewMessageChange}
+            className={d.write}></textarea>
+          <button onClick={onSendMessageClick} className={d.send}>Send</button>
         </div>
       </div>
     </div>
