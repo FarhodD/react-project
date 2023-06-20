@@ -1,7 +1,15 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
-const profileReducer = (state, action) => {
+let initialState = {
+  postData: [
+    { id: 1, message: 'Hello Everyone!', likes: 20 },
+    { id: 2, message: 'Hi, it is my first project in React!', likes: 30 }
+  ],
+  newsPostText: 'Assalamu aleykum!'
+};
+
+const profileReducer = (state = initialState, action) => {
 
   if (action.type === ADD_POST) {
     let newPost = {
