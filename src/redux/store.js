@@ -54,15 +54,12 @@ let store = {
     this._state.profilePage.newsPostText = newText;
     this._callSubscriber(this._state);
   },
-
   dispatch(action) { // {type: 'ADD-POST'}
     this._state.profilePage = profileReducer(this._state.profilePage, action);
     this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
     this._callSubscriber(this._state);
   }
+
 }
-
-
-
 
 export default store;
