@@ -20,3 +20,18 @@
 .avatar__img {
   border-radius: 50%;
 }
+
+.active__page {
+  font-weight: bold; 
+}
+
+.pages {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.pages span {
+  cursor: pointer;
+}
