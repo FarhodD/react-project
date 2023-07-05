@@ -4,7 +4,7 @@ import s from './Settings.module.css';
 const Settings = () => {
   return (
     <div>
-      Settings sdfsdfsgsfgsfg
+      <h2 className={s.settings__title}>Settings</h2>  
     </div>
   )
 }
