@@ -11,8 +11,8 @@ textarea, button {
 }
 
 textarea {
-  margin-bottom: 20px;
-  width: 300px;
+  margin-bottom: 10px;
+  width: 400px;
   height: 150px;
   resize: none;
   padding: 10px;
@@ -21,11 +21,6 @@ textarea {
   border-color: rgb(94, 94, 94);
   outline: none;
   transition: all .5s;
-}
-
-textarea:focus {
-  border-color: rgb(249, 191, 55);
-  box-shadow: 5px 5px 10px 0px #f8920c;
 }
 
 button {
