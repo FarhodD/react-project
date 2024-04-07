@@ -1,0 +1,20 @@
+.logo {
+  width: 50px;
+}
+
+.header {
+  grid-area: h;
+  background-color: #001122;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.loginBlock {}
+
+.link {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+}
